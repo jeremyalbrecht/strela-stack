@@ -1,0 +1,30 @@
+version: "3"
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - 9443:9443
+    container_name: portainer
+    networks:
+      - web
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    labels:
+      traefik.enable: true
+      traefik.docker.network: traefik_web
+      traefik.http.routers.portainer.entrypoints: websecure
+      traefik.http.routers.portainer.rule: 'Host(`portainer.jalbrecht.fr`)'
+      traefik.http.services.portainer.loadbalancer.server.port: 9000
+      traefik.http.routers.portainer.tls: true
+      traefik.http.routers.portainer.tls.certresolver: lets-encrypt
+      traefik.http.routers.portainer.service: portainer
+
+volumes:
+  data:
+
+networks:
+  web:
+    external: true
+    name: traefik_web
