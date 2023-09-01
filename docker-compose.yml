@@ -1,1 +1,6 @@
 version: "3"
+  services:
+    client:
+      image: nginx
+        ports:
+          - 8000:80
