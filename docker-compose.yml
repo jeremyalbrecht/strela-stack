@@ -3,3 +3,8 @@ version: "3.8"
 include:
   - registry.yml
   - csjbad.yml
+
+networks:
+  web:
+    external: true
+    name: traefik_web

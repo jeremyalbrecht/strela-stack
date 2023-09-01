@@ -16,7 +16,3 @@ services:
       traefik.http.routers.csjbad.tls.certresolver: lets-encrypt
       traefik.http.routers.csjbad.service: csjbad
 
-networks:
-  web:
-    external: true
-    name: traefik_web

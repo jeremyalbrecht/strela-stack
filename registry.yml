@@ -38,11 +38,6 @@ services:
 volumes:
   registry:
 
-networks:
-  web:
-    external: true
-    name: traefik_web
-
 secrets:
   htpasswd:
     file: $DOCKER_SECRETS_DIR/registry-login.secret
