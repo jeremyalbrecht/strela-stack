@@ -5,7 +5,7 @@ include:
   - csjbad.yml
   - redis.yml
   - deluge.yml
-  - csjbad.yml
+  - csjbad-runner.yml
 
 networks:
   web:
