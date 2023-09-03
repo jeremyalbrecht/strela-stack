@@ -1,0 +1,17 @@
+version: '2.3'
+services:
+  worker:
+    container_name: vocaweb-front-runner
+    image: myoung34/github-runner:latest
+    environment:
+      REPO_URL: https://github.com/jeremyalbrecht/vocaweb_web
+      RUNNER_NAME: vocaweb-front
+      RUNNER_TOKEN: ABFFIOLSN3AMZE2JGOT2TETE6TOGS
+      RUNNER_WORKDIR: /tmp/runner/workdir
+      RUNNER_SCOPE: 'repo'
+      LABELS: linux,x64
+    security_opt:
+      - label:disable
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - '/tmp/runner:/tmp/runner'
