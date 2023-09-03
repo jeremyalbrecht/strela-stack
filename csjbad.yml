@@ -2,8 +2,8 @@ version: "3.7"
 services:
   csjbad:
     restart: always
-    image: registry.jalbrecht.fr/csjbad:test
-    container_name: csjbad
+    image: registry.jalbrecht.fr/csjbad-front:latest
+    container_name: csjbad-front
     networks:
       - web
     labels:
