@@ -11,3 +11,6 @@ networks:
   web:
     external: true
     name: traefik_web
+  redis:
+    name: redis
+    driver: bridge
