@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:11
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/root_password
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - mariadb
+
+volumes:
+  mariadb_data:
+
+secrets:
+  root_password:
+    file: $DOCKER_SECRETS_DIR/mariadb-root-password.secret

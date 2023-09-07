@@ -6,6 +6,8 @@ include:
   - redis.yml
   - deluge.yml
   - csjbad-runner.yml
+  - mariadb.yml
+
 
 networks:
   web:
@@ -13,4 +15,7 @@ networks:
     name: traefik_web
   redis:
     name: redis
+    driver: bridge
+  mariadb:
+    name: mariadb
     driver: bridge
