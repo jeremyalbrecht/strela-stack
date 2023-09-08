@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  worker:
+  csjbad-strapi-worker:
     container_name: csjbad-strapi-runner
     image: myoung34/github-runner:latest
     environment:

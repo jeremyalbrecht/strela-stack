@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  worker:
+  csjbad-front-worker:
     container_name: csjbad-runner
     image: myoung34/github-runner:latest
     environment:
