@@ -1,12 +1,12 @@
 version: '2.3'
 services:
   worker:
-    container_name: csjbad-runner
+    container_name: csjbad-strapi-runner
     image: myoung34/github-runner:latest
     environment:
-      REPO_URL: https://github.com/jeremyalbrecht/csjbad
+      REPO_URL: https://github.com/jeremyalbrecht/csjbad-strapi
       RUNNER_NAME: csjbad
-      RUNNER_TOKEN: $RUNNER_CSJBAD_TOKEN
+      RUNNER_TOKEN: $RUNNER_CSJBAD_STRAPI_TOKEN
       RUNNER_WORKDIR: /tmp/runner/workdir
       RUNNER_SCOPE: 'repo'
       LABELS: linux,x64

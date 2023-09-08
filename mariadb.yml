@@ -12,6 +12,8 @@ services:
       - "3306:3306"
     networks:
       - mariadb
+    secrets:
+      - root_password
 
 volumes:
   mariadb_data:

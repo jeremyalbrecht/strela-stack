@@ -6,6 +6,7 @@ include:
   - redis.yml
   - deluge.yml
   - csjbad-runner.yml
+  - csjbad-strapi-runner.yml
   - mariadb.yml
 
 
