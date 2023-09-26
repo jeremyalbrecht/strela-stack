@@ -6,8 +6,8 @@ services:
     environment:
       REPO_URL: https://github.com/jeremyalbrecht/csjbad
       RUNNER_NAME: csjbad
-      RUNNER_TOKEN: $RUNNER_CSJBAD_TOKEN
-      RUNNER_WORKDIR: /tmp/runner/workdir
+      ACCESS_TOKEN: $GITHUB_TOKEN
+      RUNNER_WORKDIR: /tmp/runner/csjbad-runner
       RUNNER_SCOPE: 'repo'
       LABELS: linux,x64
     security_opt:

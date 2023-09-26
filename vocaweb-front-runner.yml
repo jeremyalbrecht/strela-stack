@@ -6,7 +6,7 @@ services:
     environment:
       REPO_URL: https://github.com/jeremyalbrecht/vocaweb_web
       RUNNER_NAME: vocaweb-front
-      RUNNER_TOKEN: ABFFIOLSN3AMZE2JGOT2TETE6TOGS
+      ACCESS_TOKEN: $GITHUB_TOKEN
       RUNNER_WORKDIR: /tmp/runner/workdir
       RUNNER_SCOPE: 'repo'
       LABELS: linux,x64
