@@ -2,8 +2,12 @@ version: "3.8"
 
 include:
   - registry.yml
+  - csjbad.yml
+  - csjbad-strapi.yml
   - redis.yml
   - deluge.yml
+  - csjbad-runner.yml
+  - csjbad-strapi-runner.yml
   - mariadb.yml
 
 
