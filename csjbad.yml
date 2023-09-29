@@ -15,4 +15,5 @@ services:
       traefik.http.routers.csjbad.tls: true
       traefik.http.routers.csjbad.tls.certresolver: lets-encrypt
       traefik.http.routers.csjbad.service: csjbad
+      traefik.http.routers.csjbad.middlewares: "redirect-non-www-to-www@file"
 
