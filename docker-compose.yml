@@ -9,6 +9,7 @@ include:
   - csjbad-runner.yml
   - csjbad-strapi-runner.yml
   - mariadb.yml
+  - strapi-webhook.yml
 
 
 networks:
