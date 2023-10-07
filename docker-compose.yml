@@ -21,3 +21,6 @@ networks:
   mariadb:
     name: mariadb
     driver: bridge
+  strapi:
+    name: strapi
+    driver: bridge

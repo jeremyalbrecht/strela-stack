@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  strapi-webhook:
+    image: ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
+    container_name: strapi-webhook
+    restart: unless-stopped
+    networks:
+      - strapi
+    environment:
+      GITHUB_TOKEN: $GITHUB_TOKEN
