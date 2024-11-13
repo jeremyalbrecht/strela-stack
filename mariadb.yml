@@ -16,9 +16,6 @@ services:
     secrets:
       - root_password
 
-volumes:
-  mariadb_data:
-
 secrets:
   root_password:
     file: $DOCKER_SECRETS_DIR/mariadb-root-password.secret

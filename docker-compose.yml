@@ -7,7 +7,6 @@ include:
   - mariadb.yml
   - postgresql.yml
 
-
 networks:
   web:
     external: true
@@ -24,3 +23,9 @@ networks:
   strapi:
     name: strapi
     driver: bridge
+
+volumes:
+  cache:
+    driver: local
+  postgresql_data:
+  mariadb_data:
