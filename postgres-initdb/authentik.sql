@@ -1,0 +1,3 @@
+CREATE USER authentik;
+CREATE DATABASE authentik;
+GRANT ALL PRIVILEGES ON DATABASE authentik TO authentik;

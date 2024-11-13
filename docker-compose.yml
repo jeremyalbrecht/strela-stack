@@ -5,7 +5,7 @@ include:
   - redis.yml
   - deluge.yml
   - mariadb.yml
-  - strapi-webhook.yml
+  - postgresql.yml
 
 
 networks:
@@ -16,6 +16,9 @@ networks:
     name: redis
     driver: bridge
   mariadb:
+    name: mariadb
+    driver: bridge
+  postgresql:
     name: mariadb
     driver: bridge
   strapi:
