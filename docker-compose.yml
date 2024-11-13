@@ -19,7 +19,7 @@ networks:
     name: mariadb
     driver: bridge
   postgresql:
-    name: mariadb
+    name: postgresql
     driver: bridge
   strapi:
     name: strapi
