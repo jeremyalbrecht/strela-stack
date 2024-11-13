@@ -1,7 +1,6 @@
 version: "3.8"
 
 include:
-  - registry.yml
   - redis.yml
   - deluge.yml
   - mariadb.yml
