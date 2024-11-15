@@ -19,7 +19,3 @@ services:
       - postgres-password
     networks:
       - postgresql
-
-secrets:
-  postgres-password:
-    file: $DOCKER_SECRETS_DIR/postgresql-postgres-password.secret

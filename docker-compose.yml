@@ -1,6 +1,8 @@
 version: "3.8"
 
 include:
+  - traefik.yml
+  - joal.yml
   - redis.yml
   - deluge.yml
   - mariadb.yml
@@ -8,7 +10,7 @@ include:
 
 networks:
   web:
-    external: true
+    driver: bridge
     name: traefik_web
   redis:
     name: redis
@@ -28,3 +30,18 @@ volumes:
     driver: local
   postgresql_data:
   mariadb_data:
+  certs:
+
+secrets:
+  ovh_endpoint:
+    file: "$DOCKER_SECRETS_DIR/ovh_endpoint.secret"
+  ovh_application_key:
+    file: "$DOCKER_SECRETS_DIR/ovh_application_key.secret"
+  ovh_application_secret:
+    file: "$DOCKER_SECRETS_DIR/ovh_application_secret.secret"
+  ovh_consumer_key:
+    file: "$DOCKER_SECRETS_DIR/ovh_consumer_key.secret"
+  postgres-password:
+    file: $DOCKER_SECRETS_DIR/postgresql-postgres-password.secret
+  root_password:
+    file: $DOCKER_SECRETS_DIR/mariadb-root-password.secret

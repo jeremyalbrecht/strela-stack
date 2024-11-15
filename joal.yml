@@ -1,0 +1,11 @@
+
+services:
+  joal:
+    image: anthonyraymond/joal:2.1.36
+    container_name: joal
+    restart: unless-stopped
+    volumes:
+      - /home/ubuntu/joal-conf:/data
+    ports:
+      - 8089:8089
+    command: ["--joal-conf=/data", "--spring.main.web-environment=true", "--server.port=8089", "--joal.ui.path.prefix=QECdKdqvQOwUaMSOJeqhNi", "--joal.ui.secret-token=MONHUJUPTzUadTKblFSngc"]
